@@ -1,7 +1,8 @@
 from setuptools import setup
 
+
 setup(name='libsasscompiler',
-      version='0.1',
+      version='0.1.2',
       description='django pipeline scss/sass compiler, no needed of ruby',
       url='https://github.com/sonic182/libsasscompiler',
       author='Johanderson Mogollon',
@@ -9,7 +10,7 @@ setup(name='libsasscompiler',
       license='MIT',
       packages=['libsasscompiler'],
       install_requires=[
-            'libsass',
-            'django-pipeline'
+          'libsass',
+          'django-pipeline'
       ],
       zip_safe=False)
