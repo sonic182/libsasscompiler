@@ -1,3 +1,5 @@
 libsasscompiler.egg-info/
 dist/
 build/
+env/
+.idea/

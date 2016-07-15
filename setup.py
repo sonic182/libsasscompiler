@@ -9,6 +9,7 @@ setup(name='libsasscompiler',
       license='MIT',
       packages=['libsasscompiler'],
       install_requires=[
-          'libsass',
+            'libsass',
+            'django-pipeline'
       ],
       zip_safe=False)
