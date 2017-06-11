@@ -1,3 +1,9 @@
+"""Libsass compiler for django-pipeline.
+
+Speedups development and/or production when compiling sass assets. No need of
+ruby sass anymore.
+"""
+
 try:
     import sass
 except ImportError:
@@ -10,13 +16,15 @@ from django.conf import settings
 
 
 class LibSassCompiler(CompilerBase):
-    """Compiler that uses libsass"""
+    """Compiler that uses libsass."""
     output_extension = 'css'
 
     def match_file(self, filename):
+        """Check files extension to use them."""
         return filename.endswith(('.scss', '.sass'))
 
     def compile_file(self, infile, outfile, outdated=False, force=False):
+        """Process sass file."""
         f = codecs.open(outfile, 'w', 'utf-8')
         if settings.DEBUG:
             f.write(sass.compile(filename=infile))
