@@ -1,5 +1,8 @@
 language: python
+dist: trusty
 python:
+  - "pypy"
+  - "pypy3"
   - "2.6"
   - "2.7"
   - "3.2"
@@ -14,4 +17,4 @@ python:
 # command to install dependencies
 install: "pip install -e .[test]"
 # command to run tests
-script: pytest tests/compile.py
+script: pytest --cov libsasscompiler tests/compile.py
