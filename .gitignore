@@ -2,6 +2,7 @@ libsasscompiler.egg-info/
 dist/
 build/
 env/
+env2/
 .idea/
 *.pyc
 

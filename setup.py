@@ -10,16 +10,16 @@ setup(name='libsasscompiler',
       license='MIT',
       packages=['libsasscompiler'],
       install_requires=[
-          'libsass',
-          'django-pipeline'
+          'libsass<=1.0.0',
+          'django-pipeline<=1.7.0'
       ],
       extras_require={
           'test': [
-              'pytest',
-              'pytest-pep8',
-              'pytest-cov',
-              'django',
-              'django-pipeline'
+              'pytest<=3.2.0',
+              'pytest-pep8<=1.8.0',
+              'pytest-cov<=2.6.0',
+              'django<=1.12.0',
+              'django-pipeline<=1.7.0'
           ]
       },
       zip_safe=False)

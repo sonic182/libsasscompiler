@@ -10,7 +10,8 @@ from django.conf import settings
 # Make collectstatic command work.
 os.environ.setdefault("DJANGO_SETTINGS_MODULE",
                       "tests.django_app.django_app.settings")
-django.setup()
+django.setup(set_prefix=False)
+# django.setup()
 
 
 def test_compress():
