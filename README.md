@@ -1,5 +1,6 @@
 
 [![Build Status](https://travis-ci.org/sonic182/libsasscompiler.svg?branch=master)](https://travis-ci.org/sonic182/libsasscompiler)
+[![Coverage Status](https://coveralls.io/repos/github/sonic182/libsasscompiler/badge.svg?branch=master)](https://coveralls.io/github/sonic182/libsasscompiler?branch=master)
 
 # Libsasscompiler
 
