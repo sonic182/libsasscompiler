@@ -13,4 +13,13 @@ setup(name='libsasscompiler',
           'libsass',
           'django-pipeline'
       ],
+      extras_require={
+          'test': [
+              'pytest',
+              'pytest-pep8',
+              'pytest-cov',
+              'django',
+              'django-pipeline'
+          ]
+      },
       zip_safe=False)

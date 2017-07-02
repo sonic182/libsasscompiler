@@ -4,3 +4,10 @@ build/
 env/
 .idea/
 *.pyc
+
+.cache/
+.eggs/
+
+staticfiles/
+.coverage
+htmlcov/
