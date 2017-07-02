@@ -9,6 +9,8 @@ setup(name='libsasscompiler',
       author_email='johanderson@mogollon.com.ve',
       license='MIT',
       packages=['libsasscompiler'],
+      setup_requires=['pytest-runner'],
+      test_requires=['pytest'],
       install_requires=[
           'libsass<=1.0.0',
           'django-pipeline<=1.7.0'
@@ -19,6 +21,7 @@ setup(name='libsasscompiler',
               'pytest-pep8<=1.8.0',
               'pytest-cov<=2.6.0',
               'django<=1.12.0',
+              'coveralls',
               'django-pipeline<=1.7.0'
           ]
       },

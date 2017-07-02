@@ -12,4 +12,8 @@ python:
 # command to install dependencies
 install: "pip install -e .[test]"
 # command to run tests
-script: pytest --cov libsasscompiler tests/compile.py
+script: 
+# pytest --cov libsasscompiler tests/compile.py
+  - coverage run --source=libsasscompiler setup.py test
+after_success:
+  coveralls
