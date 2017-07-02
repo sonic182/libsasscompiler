@@ -9,7 +9,7 @@ from django.conf import settings
 
 # Make collectstatic command work.
 os.environ.setdefault("DJANGO_SETTINGS_MODULE",
-                      "django_app.django_app.settings")
+                      "test_djangoapp.django_app.settings")
 django.setup()
 
 
