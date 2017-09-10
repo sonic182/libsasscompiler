@@ -4,11 +4,7 @@ Speedups development and/or production when compiling sass assets. No need of
 ruby sass anymore.
 """
 
-try:
-    import sass
-except ImportError:
-    raise Exception("You need to `pip install libsass` first")
-
+import sass
 import codecs
 from pipeline.compilers import CompilerBase
 from django.conf import settings
