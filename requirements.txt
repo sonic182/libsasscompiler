@@ -1,6 +1,6 @@
 apipkg==1.4
 coverage==4.4.1
-Django==1.11.3
+django>=1.11.15
 django-pipeline==1.6.13
 execnet==1.4.1
 futures==3.1.1
