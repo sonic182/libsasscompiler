@@ -1,4 +1,19 @@
+
+import re
 from setuptools import setup
+
+rgx = re.compile('([\w-]+==[\d.]+)')
+
+
+def read_file(filename):
+    """read file correctly."""
+    with open(filename) as _file:
+        return _file.read().strip()
+
+
+def requirements(filename):
+    """parse requirements from file."""
+    return re.findall(rgx, read_file(filename)) or []
 
 
 setup(name='libsasscompiler',
@@ -11,10 +26,7 @@ setup(name='libsasscompiler',
       packages=['libsasscompiler'],
       setup_requires=['pytest-runner'],
       test_requires=['pytest'],
-      install_requires=[
-          'libsass<=1.0.0',
-          'django-pipeline<=1.7.0'
-      ],
+      install_requires=requirements('requirements.txt'),
       extras_require={
           'test': [
               'pytest<=3.2.0',
