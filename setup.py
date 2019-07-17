@@ -2,7 +2,7 @@
 import re
 from setuptools import setup
 
-rgx = re.compile('([\w-]+==[\d.]+)')
+rgx = re.compile('([\w-]+[<=]{1}=[\d.]+)')
 
 
 def read_file(filename):
