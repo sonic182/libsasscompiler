@@ -24,6 +24,7 @@ def requirements(filename):
 
 setup(name='libsasscompiler',
       version=version(),
+      python_requires='>=3.6.0',
       description='django pipeline scss/sass compiler, no needed of ruby',
       url='https://github.com/sonic182/libsasscompiler',
       long_description=read_file('README.md'),
