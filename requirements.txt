@@ -4,6 +4,5 @@
 #
 #    pip-compile requirements.in
 #
-django-pipeline<=1.6.13
-libsass<=0.19.2
-six==1.12.0               # via libsass
+django-pipeline<2.1.0
+libsass<=1.0.0

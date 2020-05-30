@@ -7,6 +7,10 @@
 
 A fast scss/sass compiler for [django-pipeline](https://github.com/jazzband/django-pipeline) using [python libsass port](https://github.com/dahlia/libsass-python) (no needed of ruby-sass anymore)
 
+# Requirements
+
+Same as django-pipeline
+
 # Install
 
 `pip install libsasscompiler`
