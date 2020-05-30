@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.8] - 2020-30-05
+### Fixed
+- Travis test image
+- Python 3.5 not for travis test
+
 ## [0.1.7] - 2020-30-05
 ### Added
 - Readme to pypi
@@ -29,7 +34,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fixed indentation
 
-[Unreleased]: https://github.com/sonic182/libsasscompiler/compare/0.1.7...master
+[Unreleased]: https://github.com/sonic182/libsasscompiler/compare/0.1.8...master
+[0.1.8]: https://github.com/sonic182/libsasscompiler/compare/0.1.7...0.1.8
 [0.1.7]: https://github.com/sonic182/libsasscompiler/compare/0.1.6...0.1.7
 [0.1.6]: https://github.com/sonic182/libsasscompiler/compare/0.1.5...0.1.6
 [0.1.5]: https://github.com/sonic182/libsasscompiler/compare/v0.1.4...0.1.5
