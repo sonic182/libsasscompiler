@@ -37,13 +37,6 @@ setup(name='libsasscompiler',
       test_requires=['pytest'],
       install_requires=requirements('requirements.txt'),
       extras_require={
-          'test': [
-              'pytest<=3.2.0',
-              'pytest-pep8<=1.8.0',
-              'pytest-cov<=2.6.0',
-              'django<=1.12.0',
-              'coveralls',
-              'django-pipeline<=2.1.0'
-          ]
+          'test': requirements('test-requirements.txt')
       },
       zip_safe=False)

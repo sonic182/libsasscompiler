@@ -1,2 +1,2 @@
 libsass<1.0.0
-django-pipeline<1.7.0
+django-pipeline<4.0.0

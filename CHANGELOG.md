@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2024-08-24
+### Fixed
+- Fix dependencies for working with django 2 (pending to update package so it works with django 3 and 4)
+
 ## [0.1.9] - 2021-11-02
 ### Fixed
 - No pytest-runner in setup.py
@@ -38,7 +42,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fixed indentation
 
-[Unreleased]: https://github.com/sonic182/libsasscompiler/compare/0.1.9...master
+[Unreleased]: https://github.com/sonic182/libsasscompiler/compare/0.2.0...master
+[0.2.0]: https://github.com/sonic182/libsasscompiler/compare/0.1.9...0.2.0
 [0.1.9]: https://github.com/sonic182/libsasscompiler/compare/0.1.8...0.1.9
 [0.1.8]: https://github.com/sonic182/libsasscompiler/compare/0.1.7...0.1.8
 [0.1.7]: https://github.com/sonic182/libsasscompiler/compare/0.1.6...0.1.7
