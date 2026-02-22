@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-02-22
+
 ### Added
 - Support `LIBSASSCOMPILER_INCLUDE_PATHS` setting to pass extra import search paths to `sass.compile(..., include_paths=...)`.
 
@@ -48,7 +50,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fixed indentation
 
-[Unreleased]: https://github.com/sonic182/libsasscompiler/compare/0.2.0...master
+[Unreleased]: https://github.com/sonic182/libsasscompiler/compare/0.2.1...master
+[0.2.1]: https://github.com/sonic182/libsasscompiler/compare/0.2.0...0.2.1
 [0.2.0]: https://github.com/sonic182/libsasscompiler/compare/0.1.9...0.2.0
 [0.1.9]: https://github.com/sonic182/libsasscompiler/compare/0.1.8...0.1.9
 [0.1.8]: https://github.com/sonic182/libsasscompiler/compare/0.1.7...0.1.8

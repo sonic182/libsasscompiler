@@ -2,12 +2,6 @@
 import re
 from setuptools import setup
 
-
-def version():
-    data = read_file('./libsasscompiler/version.py')
-    return re.findall(r"VERSION = '([a-z0-9.]*)'", data)[0]
-
-
 rgx = re.compile('([\w-]+[<=]{1}=[\d.]+)')
 
 
@@ -23,7 +17,7 @@ def requirements(filename):
 
 
 setup(name='libsasscompiler',
-      version=version(),
+      version='0.2.1',
       python_requires='>=3.6.0',
       description='django pipeline scss/sass compiler, no needed of ruby',
       url='https://github.com/sonic182/libsasscompiler',
