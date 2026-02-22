@@ -6,6 +6,7 @@ ruby sass anymore.
 
 import sass
 import codecs
+import os
 from pipeline.compilers import CompilerBase
 from django.conf import settings
 
@@ -23,9 +24,18 @@ class LibSassCompiler(CompilerBase):
         """Process sass file."""
         myfile = codecs.open(outfile, 'w', 'utf-8')
 
+        include_paths = [os.path.dirname(infile)]
+        include_paths.extend(getattr(settings,
+                                     'LIBSASSCOMPILER_INCLUDE_PATHS',
+                                     []))
+        compile_kwargs = {
+            'filename': infile,
+            'include_paths': include_paths,
+        }
+
         if settings.DEBUG:
-            myfile.write(sass.compile(filename=infile))
+            myfile.write(sass.compile(**compile_kwargs))
         else:
-            myfile.write(sass.compile(filename=infile,
-                                      output_style='compressed'))
+            compile_kwargs['output_style'] = 'compressed'
+            myfile.write(sass.compile(**compile_kwargs))
         return myfile.close()

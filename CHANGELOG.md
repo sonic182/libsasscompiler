@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Support `LIBSASSCOMPILER_INCLUDE_PATHS` setting to pass extra import search paths to `sass.compile(..., include_paths=...)`.
+
+### Fixed
+- SCSS imports can now resolve shared files outside the source file directory when custom include paths are configured.
+
 ## [0.2.0] - 2024-08-24
 ### Fixed
 - Fix dependencies for working with django 2 (pending to update package so it works with django 3 and 4)
