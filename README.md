@@ -24,6 +24,30 @@ PIPELINE['COMPILERS'] = (
 )
 ```
 
+Optional: add extra include paths for `@import` resolution.
+
+```python
+LIBSASSCOMPILER_INCLUDE_PATHS = [
+    '/path/to/shared/styles',
+    '/path/to/another/scss/dir',
+]
+```
+
+These paths are passed to `sass.compile(..., include_paths=...)`.
+
+Imports are resolved from:
+
+1. the directory of the source scss/sass file
+2. `LIBSASSCOMPILER_INCLUDE_PATHS` (if defined)
+
+Example:
+
+```scss
+@import "shared";
+```
+
+With `LIBSASSCOMPILER_INCLUDE_PATHS = ['/path/to/shared/styles']`, libsass will resolve `/path/to/shared/styles/shared.scss`.
+
 # Contribute
 
 1. Fork

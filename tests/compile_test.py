@@ -50,3 +50,31 @@ def test_compilation_no_debug():
     django.setup()
     call_command('collectstatic', verbosity=0, interactive=False)
     assert True
+
+
+def test_import_from_django_app_static_dir():
+    """Import should work for files in app static dirs."""
+    from libsasscompiler import LibSassCompiler
+
+    previous_paths = getattr(settings, 'LIBSASSCOMPILER_INCLUDE_PATHS', None)
+    settings.LIBSASSCOMPILER_INCLUDE_PATHS = [
+        os.path.join(settings.BASE_DIR, 'django_app', 'static')
+    ]
+
+    compiler = LibSassCompiler(verbose=False, storage=None)
+    infile = os.path.join(settings.STATICFILES_DIRS[0], 'tests/import_main.scss')
+    outfile = os.path.join(settings.STATIC_ROOT, 'css/import_main.css')
+
+    os.makedirs(os.path.dirname(outfile), exist_ok=True)
+    try:
+        compiler.compile_file(infile, outfile)
+    finally:
+        if previous_paths is None:
+            delattr(settings, 'LIBSASSCOMPILER_INCLUDE_PATHS')
+        else:
+            settings.LIBSASSCOMPILER_INCLUDE_PATHS = previous_paths
+
+    with open(outfile) as compiled:
+        css = compiled.read()
+
+    assert 'color:red' in css.replace(' ', '')
